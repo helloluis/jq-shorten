@@ -7,26 +7,25 @@
 <body>
 	
 	<h1>Test</h1>
-	<div id="replacethese">
-		<p>
-			<b>Old Url:</b> http://google.com<br />
-			<a href="http://google.com">Short URL</a>
-		</p>
-		
-		<p>
-			<b>Old Url:</b> http://friendfeed.com/bryceroney<br />
-			<a href="http://friendfeed.com/bryceroney">Short URL</a>
-		</p>
-		
-	</div>
 
+  <p>
+    Original, unshortened text:<br />
+    <strong>Follow me on Twitter at http://twitter.com/helloluis or at http://guttervomit.com</strong>
+  </p>
+	
+	<p class="shorten_with_bitly">Follow me on Twitter at http://twitter.com/helloluis or at http://guttervomit.com</p>
+	
+	<textarea class="shorten_with_bitly" rows="3" cols="30">Follow me on Twitter at http://twitter.com/helloluis or at http://guttervomit.com</textarea><br />
+
+  <input type='text' class="shorten_with_bitly" value='Follow me on Twitter at http://twitter.com/helloluis' size="35"/><br />
 		
 <script type="text/javascript" charset="utf-8">
-var login = "bitlyapidemo";
-var apikey = "R_0da49e0a9118ff35f52f629d2d71bf07";
-
+  var login = "bitlyapidemo";
+  var apikey = "R_0da49e0a9118ff35f52f629d2d71bf07";
+  var login = 'infinitely';
+  var apikey = 'R_42fe8e26f99d5bae4912476d8cfdaaaf';
 	$(document).ready(function() {
-		$("#replacethese a").shorten({login: login, apikey: apikey});
+		$(".shorten_with_bitly").shorten({login: login, apikey: apikey});
 	});
 </script>
 </body>
